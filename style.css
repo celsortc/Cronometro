@@ -1,0 +1,35 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+}
+
+.cronometro-container {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.cronometro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tempo {
+  font-size: 8rem;
+  justify-content: center;
+  width: 200px;
+}
+.botao {
+  font-size: 2rem;
+  margin: 10px;
+  padding: 10px;
+}
+span {
+  display: inline;
+}
