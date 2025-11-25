@@ -38,7 +38,7 @@ iniciar.onclick = () => {
         minutos.innerHTML = formataNumero(min, "min");
       }
     }
-  }, 1);
+  }, 10);
 };
 
 function formataNumero(numero, tipo) {
