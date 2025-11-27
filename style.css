@@ -2,6 +2,7 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
+  /* line-height: 3em !important; */
 }
 
 body {
@@ -21,12 +22,13 @@ body {
   display: flex;
   flex-direction: column;
   user-select: none;
-  border: 1px solid;
+  /* border: 1px solid; */
+  box-sizing: border-box;
   padding: 15px;
 }
 
 .tempo {
-  font-size: 8rem;
+  font-size: 128px;
   display: flex;
   justify-content: center;
   margin: 10px;
@@ -77,4 +79,8 @@ footer a::after {
 }
 footer a:hover::after {
   width: 100%;
+}
+
+.tempo .nums {
+  width: 2ch;
 }
