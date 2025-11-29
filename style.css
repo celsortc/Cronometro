@@ -45,9 +45,14 @@ body {
   margin: 10px;
   padding: 10px;
   background-color: #c4c4c442;
-  border-radius: 4px;
+  border-radius: 10px;
   border: 1px solid #c4c4c4;
   cursor: pointer;
+  min-width: 100px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .botao:hover {
@@ -82,4 +87,16 @@ footer a:hover::after {
 
 .tempo .nums {
   width: 2ch;
+}
+
+.resetBtn {
+  width: 30px;
+  height: 30px;
+  background-color: #000;
+  border-radius: 4px;
+}
+
+.images {
+  width: 30px;
+  height: 30px;
 }
