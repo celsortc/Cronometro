@@ -31,6 +31,7 @@ function iniciarC() {
     sec = +segundos.innerHTML;
     min = +minutos.innerHTML;
   }
+
   interval = setInterval(() => {
     cronPausado = false;
     if (mili < 990) {
@@ -82,7 +83,7 @@ function reiniciarC() {
   reiniciar.disabled = true;
   pausar.disabled = true;
   iniciar.disabled = false;
-  cronPausado = false;
+  cronPausado = true;
 
   clearInterval(interval);
 
@@ -97,8 +98,6 @@ function reiniciarC() {
 
 document.addEventListener("keypress", function (e) {
   if (e.key === " ") {
-    console.log(cronPausado);
-
     if (cronPausado === false) {
       pausaC();
     } else {
@@ -106,8 +105,8 @@ document.addEventListener("keypress", function (e) {
     }
     return;
   }
-  // if (e.key === "r") {
-  //   reiniciarC();
-  //   return;
-  // }
+  if (e.key === "r") {
+    reiniciarC();
+    return;
+  }
 });
