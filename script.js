@@ -11,9 +11,13 @@ var sec = 0;
 var min = 0;
 
 var interval;
-var cronPausado = false;
+var cronPausado;
 
 iniciar.onclick = () => {
+  iniciarC();
+};
+
+function iniciarC() {
   iniciar.disabled = true;
   reiniciar.disabled = false;
   pausar.disabled = false;
@@ -46,7 +50,7 @@ iniciar.onclick = () => {
       }
     }
   }, 10);
-};
+}
 
 function formataNumero(numero, tipo) {
   if (cronPausado === true) {
@@ -60,13 +64,21 @@ function formataNumero(numero, tipo) {
 }
 
 pausar.onclick = () => {
+  pausaC();
+};
+
+function pausaC() {
   pausar.disabled = true;
   iniciar.disabled = false;
   cronPausado = true;
   clearInterval(interval);
-};
+}
 
 reiniciar.onclick = () => {
+  reiniciarC();
+};
+
+function reiniciarC() {
   reiniciar.disabled = true;
   pausar.disabled = true;
   iniciar.disabled = false;
@@ -81,4 +93,21 @@ reiniciar.onclick = () => {
   milisegundos.innerHTML = mili;
   segundos.innerHTML = sec;
   minutos.innerHTML = min;
-};
+}
+
+document.addEventListener("keypress", function (e) {
+  if (e.key === " ") {
+    console.log(cronPausado);
+
+    if (cronPausado === false) {
+      pausaC();
+    } else {
+      iniciarC();
+    }
+    return;
+  }
+  // if (e.key === "r") {
+  //   reiniciarC();
+  //   return;
+  // }
+});
