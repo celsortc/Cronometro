@@ -39,7 +39,6 @@ body {
 }
 
 .botao {
-  font-size: 2rem;
   margin: 10px;
   padding: 10px;
   background-color: #c4c4c442;
@@ -110,4 +109,14 @@ footer a:hover::after {
 .images {
   width: 30px;
   height: 30px;
+}
+
+@media (max-width: 600px) {
+  .tempo {
+    font-size: 5rem;
+  }
+  .botao {
+    min-width: 80px;
+    min-height: 40px;
+  }
 }
